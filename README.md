@@ -69,18 +69,16 @@ $ docker exec -it app1 sh
 
 While you should add any packages to the container via the Dockerfile and submitting a Pull Request on this repo, if you need to play around with a container to get what you need before you edit the Dockerfile the following commands may help
 
-
-```sh
 **Updating the repository indexes**
+```sh
 $ apk update
 ```
 
-```sh
 **Searching the repos**
+```sh
 $ apk search [term]
 ```
-
-```sh
 **Adding a package**
+```sh
 $ apk add [package]
 ```
