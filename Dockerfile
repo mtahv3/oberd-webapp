@@ -16,7 +16,8 @@ RUN apk --update add php \
 	php-phar \
 	php-pear \
 	php-cli \
-	php-openssl
+	php-openssl \
+	php-dom
 
 
 RUN apk add apache2 \

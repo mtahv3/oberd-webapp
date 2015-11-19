@@ -22,6 +22,7 @@ The container is meant to be small and lightweight, so in turn is fairly minimal
     Pear
     Cli
     OpenSSL
+    DOM
 
 
 ### Installed Apache Modules
