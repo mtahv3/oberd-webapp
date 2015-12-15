@@ -17,6 +17,7 @@ RUN apk --update add php \
 	php-pear \
 	php-cli \
 	php-openssl \
+	php-pdo_mysql \
 	php-dom
 
 
