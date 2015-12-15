@@ -23,6 +23,8 @@ The container is meant to be small and lightweight, so in turn is fairly minimal
     Cli
     OpenSSL
     DOM
+    PDO
+    ctype
 
 
 ### Installed Apache Modules

@@ -18,7 +18,8 @@ RUN apk --update add php \
 	php-cli \
 	php-openssl \
 	php-pdo_mysql \
-	php-dom
+	php-dom \
+	php-ctype
 
 
 RUN apk add apache2 \
