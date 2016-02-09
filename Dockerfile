@@ -19,7 +19,8 @@ RUN apk --update add php \
 	php-openssl \
 	php-pdo_mysql \
 	php-dom \
-	php-ctype
+	php-ctype \
+	php-posix
 
 
 RUN apk add apache2 \
