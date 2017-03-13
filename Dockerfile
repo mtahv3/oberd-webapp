@@ -20,14 +20,13 @@ RUN apk --update add php \
 	php-pdo_mysql \
 	php-dom \
 	php-ctype \
-	php-posix
-
-
-RUN apk add apache2 \
+	php-posix \
+	apache2 \
 	php-apache2 \
 	apache2-ssl \
 	openssl \
-	apache2-proxy
+	apache2-proxy \
+	git
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && chmod +x /usr/local/bin/composer
 
