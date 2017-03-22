@@ -35,8 +35,12 @@ ADD apache/deflate.conf /etc/apache2/conf.d/deflate.conf
 RUN echo "ServerName localhost" >> /etc/apache2/httpd.conf && \
     sed -i "s/ServerAdmin.*/ServerAdmin admin@oberd.com/g" /etc/apache2/httpd.conf && \
     sed -i '/^#LoadModule filter_module/s/^#//' /etc/apache2/httpd.conf && \
-    sed -i 's/^SSLMutex/#SSLMutex/' /etc/apache2/conf.d/ssl.conf
+    sed -i 's/^SSLMutex/#SSLMutex/' /etc/apache2/conf.d/ssl.conf && \
+    sed -ri \
+		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
+		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' \
+		"/etc/apache2/httpd.conf"
 
 EXPOSE 80 443
 
-ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
+CMD ["apachectl", "-D", "FOREGROUND"]
